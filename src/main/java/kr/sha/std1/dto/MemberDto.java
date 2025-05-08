@@ -11,4 +11,6 @@ public class MemberDto {
 	private String id;
 	private String memId;
 	private String memNm;
+	
+	
 }

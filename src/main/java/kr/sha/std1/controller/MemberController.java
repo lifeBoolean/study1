@@ -35,7 +35,7 @@ public class MemberController {
 	
 	@PostMapping("/member/process")
 	public String memberProcess(Model model, MemberDto vo) {
-		log.info("MemberDto {}", vo);
+		log.info("MemberDto {}", vo.toString());
 		memberService.insertMember(vo);
 //		if("".equals(vo.getMemId()) || vo.getMemId() == null) {
 //			log.info("groupModifyForm 1~~~~~~~~~~~ {}", vo.toString());
