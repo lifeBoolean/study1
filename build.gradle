@@ -1,0 +1,94 @@
+plugins {
+	id 'java'
+	id 'war'
+	id 'org.springframework.boot' version '3.3.11'
+	id 'io.spring.dependency-management' version '1.1.7'
+	id 'eclipse'
+	id 'eclipse-wtp'
+}
+
+group = 'sha'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// JSP 관련 설정 (Spring Boot 3.x 기준 Jakarta EE)
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0' // Eclipse 빌드 경로에 포함됨
+	compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+	providedCompile 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+	implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.2'
+	implementation 'org.eclipse.jetty:glassfish-jstl:11.0.25'
+	//implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
+	
+	// https://mvnrepository.com/artifact/org.eclipse.jetty/glassfish-jstl
+	// https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api
+
+	// Lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// DevTools (개발용)
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// WAR용: 내장 톰캣 제외
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+	// 보안/마이바티스
+	// implementation 'org.springframework.boot:spring-boot-starter-security'
+	// implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
+	// testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.4'
+	
+	// log4jdbc - 쿼리 & 결과 테이블 로그용
+	implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+	
+	// 기타 유틸
+	implementation 'commons-io:commons-io:2.11.0'
+	implementation 'commons-fileupload:commons-fileupload:1.4'
+	implementation 'org.apache.poi:poi:4.1.2'
+	implementation 'org.apache.poi:poi-ooxml:4.1.2'
+	implementation 'org.springframework.security:spring-security-taglibs'
+	
+	// AOP
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	
+	// 유효성 검사
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	
+	// DB 드라이버
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	
+	// 테스트
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	testImplementation 'org.springframework.security:spring-security-test'
+	
+	// ✨ 추가: XSS 방어용 Sanitizer 라이브러리
+    implementation 'com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20211018.1'
+}
+
+// war 빌드시 필요
+bootWar {
+    enabled = true
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

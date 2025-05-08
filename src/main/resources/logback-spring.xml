@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 콘솔 출력 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- log4jdbc: 결과 테이블만 출력 -->
+    <logger name="jdbc.sqlonly" level="INFO" />
+    <logger name="jdbc.sqltiming" level="OFF" />
+    <logger name="jdbc.audit" level="OFF" />
+    <logger name="jdbc.connection" level="OFF" />
+    <logger name="jdbc.resultset" level="OFF" />
+    <logger name="jdbc.resultsettable" level="INFO" />
+    <logger name="jdbc" level="OFF" />
+
+    <!-- MyBatis 쿼리 로그 (선택) -->
+    <logger name="org.apache.ibatis" level="DEBUG" />
+    <logger name="kr.sha" level="DEBUG" />
+
+    <!-- Spring 및 기타 로그 최소화 -->
+    <logger name="org.springframework" level="INFO" />
+    <logger name="com.zaxxer.hikari" level="INFO" />
+
+    <!-- 최상위 루트 로그 레벨 -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

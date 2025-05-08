@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: study1
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+#    url: jdbc:log4jdbc:mariadb://106.249.252.250:3306/today_lego?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:log4jdbc:mariadb://127.0.0.1:3306/sha-planing?characterEncoding=UTF-8&serverTimezone=UTC
+#    url: jdbc:log4jdbc:mariadb://106.249.252.250:3306/today_lego?characterEncoding=UTF-8&serverTimezone=UTC
+    #url: jdbc:mariadb://106.249.252.250:3306/today_lego?characterEncoding=UTF-8&serverTimezone=UTC
+    #driver-class-name: org.mariadb.jdbc.Driver
+#    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    username: root
+    password: password
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+      location: C:/upload
+#  profiles:
+#    include: cipher
+server:
+  port: '8088'
+  servlet:
+    session:
+      timeout: 18000
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath*:mappers/**/*.xml
+logging:
+  level:
+    jdbc.sqlonly: info
+    jdbc.resultsettable: info
+file:
+  uploadPath: C:/upload/
+#jwt:
+#  secret: vmfhaltmskdlstkfkdgodyroqkfwkdbalroqkfwkdbalaaaaaaaaaaaaaaaabbbbb
+#private:
+#  key : aYtnmD12345678987#54!@1asekey987
+# 꽌리자 비밀번호: abb#$asdfghJk
