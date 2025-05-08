@@ -1,0 +1,48 @@
+@import url("reset.css");
+@import url("common.css");
+@import url("header.css");
+@import url("footer.css");
+/* 
+social-wrap check box style
+.social-wrap .save-chkbox input[type=checkbox]{
+	position:absolute;
+	opacity:0;
+	width: 30px;
+	height: 30px;
+	padding:0;
+	margin:0;
+	cursor:pointer;
+}
+.social-wrap .save-chkbox input[type=checkbox]+label {
+	display:inline-block;
+	clear:none;
+	padding-left: 26px;
+	width: 30px;
+	height: 30px;
+	background-position-x: 0;
+	background-position-y: 0;
+}
+
+.social-wrap .save-chkbox label {
+	padding-top: 2px;
+	font-size: 13px;
+	cursor:pointer;
+}
+.social-wrap .save-chkbox input[type=checkbox]+label {
+	background:url(../imgs/heart.png) no-repeat 0 0;
+}
+.social-wrap .save-chkbox input[type=checkbox]:checked+label {
+	background-position: 0 -30px;
+	background-position-x:0%;
+}
+.social-wrap .compare-box label {
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	cursor:pointer;
+}
+check box style End
+
+.navContainer .gsch input[type=checkbox]+label {
+	background:url(../imgs/input_checkbox_tree.png) no-repeat 0 0;
+} */

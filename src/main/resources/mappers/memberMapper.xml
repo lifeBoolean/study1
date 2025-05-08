@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.sha.std1.mapper.MemberMapper">
+
+	<insert id="insertMember" parameterType="kr.sha.std1.dto.MemberDto">
+		INSERT INTO TB_MEMBER (
+			MEM_ID, MEM_NM
+		)
+		VALUES (
+			#{memId}, #{memNm}
+		)
+	</insert>
+	
+	<update id="updateMember" parameterType="kr.sha.std1.dto.MemberDto">
+		UPDATE TB_MEMBER
+		<trim prefix="SET" suffixOverrides=",">
+			<if test="memGroup != null">MEM_GROUP = #{memGroup},</if>
+			<if test="memNm != null">MEM_NM = #{memNm},</if>
+			<if test="memPw != null">MEM_PW = #{memPw},</if>
+			<if test="memCp != null">MEM_CP = #{memCp},</if>
+			<if test="memEmail != null">MEM_EMAIL = #{memEmail},</if>
+			<if test="memGrade != null">MEM_GRADE = #{memGrade},</if>
+			<if test="memDept != null">MEM_DEPT = #{memDept},</if>
+			<if test="memMemo != null">MEM_MEMO = #{memMemo},</if>
+			<if test="statusYn != null">STATUS_YN = #{statusYn},</if>
+			MOD_DTTM = now()
+		</trim>
+		<where>
+		<choose>
+			<when test="memId != null and memId != ''">
+				MEM_ID = #{memId}
+			</when>
+			<otherwise>
+				1 = 0 <!-- 조건이 없을 경우 업데이트 방지 -->
+			</otherwise>
+		</choose>
+		</where>
+	</update>
+	
+	<update id="deleteMember" parameterType="kr.sha.std1.dto.MemberDto">
+		UPDATE TB_MEMBER
+		<trim prefix="SET" suffixOverrides=",">
+			<if test="delYn != null">DEL_YN = #{delYn},</if>
+		</trim>
+		 WHERE MEM_ID = #{memId}
+	</update>
+	
+	<select id="getMemberInfo" parameterType="kr.sha.std1.dto.MemberDto" resultType="kr.sha.std1.dto.MemberDto">
+		SELECT MEM_ID, MEM_NM
+		  FROM TB_MEMBER
+		 WHERE 1=1
+		   AND MEM_ID = #{memId}
+	</select>
+	
+</mapper>

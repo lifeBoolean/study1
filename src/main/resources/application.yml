@@ -8,7 +8,7 @@ spring:
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
 #    url: jdbc:log4jdbc:mariadb://106.249.252.250:3306/today_lego?characterEncoding=UTF-8&serverTimezone=UTC
-    url: jdbc:log4jdbc:mariadb://127.0.0.1:3306/sha-planing?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:log4jdbc:mariadb://127.0.0.1:3306/study?characterEncoding=UTF-8&serverTimezone=UTC
 #    url: jdbc:log4jdbc:mariadb://106.249.252.250:3306/today_lego?characterEncoding=UTF-8&serverTimezone=UTC
     #url: jdbc:mariadb://106.249.252.250:3306/today_lego?characterEncoding=UTF-8&serverTimezone=UTC
     #driver-class-name: org.mariadb.jdbc.Driver
@@ -24,7 +24,7 @@ spring:
 #  profiles:
 #    include: cipher
 server:
-  port: '8088'
+  port: '8081'
   servlet:
     session:
       timeout: 18000

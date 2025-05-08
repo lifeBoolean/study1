@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+.joinContainer {
+	margin: 0 auto;
+	padding: 80px 0 30px 0;
+	width: 480px;
+}
+.joinLogo {
+	padding-bottom: 20px;
+	text-align: center;
+}
+.userInfo {
+	padding: 30px 30px 40px 30px;
+	border: 1px solid #DCDCDC;
+}
+.userField li {
+	padding-bottom: 10px;
+}
+.userField label {
+	padding: 3px 0;
+	display: block;
+	font-size: 14px;
+}
+.userField input {
+    padding: 10px 0 10px 10px;
+	width: 100%;
+    font-size: 14px;
+    border: 1px solid #DCDCDC;
+}
+.joinContainer .btnWrap {
+	padding-top:12px;
+}
+.joinContainer .btnJoin {
+	display:block;
+	margin:0 auto;
+	padding:15px;
+	border:0 none;
+	width:100%;
+	font-size:16px;
+	background: #5F0080;
+	color:#fff;
+}
+.loginTit {
+	font-weight: 800;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+}
+.errortxt {
+	padding: 5px 0;
+	color: #d32f2f;
+	font-weight: 800;
+    font-size: 14px;
+    text-align: center;
+}
+.shortinput {
+	padding: 5px !important;
+	width: 340px !important;
+}
+.msgtxt {
+	padding: 3px 0;
+	text-align: right;
+}
+.authbtn {
+	padding: 3px 5px;
+	color: #fff;
+	background-color: #19ce60;
+}
+.msgtxt {
+}
+.authbox {
+	padding: 10px 0;
+}
+.authbox span {
+	display: inline-block;
+}
+.bggray {
+	background: #E1E1E1;
+}
+.custom-select {
+	width: 100%;
+	appearance: none; /* 크로스브라우징은 아래 참조 */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: white;
+	border: 1px solid #ccc;
+	padding: 10px 40px 10px 15px;
+	border-radius: 8px;
+	background-image: url('https://cdn-icons-png.flaticon.com/512/32/32195.png');
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+	background-size: 16px;
+	cursor: pointer;
+}
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}

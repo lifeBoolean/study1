@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+.wrapper_study {
+	padding: 50px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	border: 3px solid black;
+}
+.study_container {
+	margin: 0 auto;
+	width: 1400px;
+	height: 700px;
+	border: 0px solid blue;
+}
+.study_title {
+}
+.study_title>h2 {
+	padding: 10px 20px;
+	color: #fff;
+	background-color: #0A2B4A;
+}
+.study_article {
+	display: flex;
+	border: 0px solid red;
+}
+.study_article .content_wrap {
+	width: 1120px;
+	border: 0px solid blue;
+}
+.study_article .content_wrap .img_box {
+	/* display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 660px;
+	border: 0px solid black; */
+}
+.study_article .content_wrap .btx_box {
+	height: 180px;
+	border: 1px solid #000;
+}
+.study_article .studynav_wrap {
+	width: 280px;
+	border: 1px solid #000;
+}
+.canvas_box {
+	flex: 1 1 0%; 
+    position: relative;
+    width: 300px;
+	height: 300px;
+	border: 10px solid red;
+	overflow: hidden;
+}
+.canvas {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+	background: #eee;
+}
+.color-btn {
+	width: 30px;
+	height: 30px;
+	border: 0;
+	border-radius: 50%;
+}
+.color-btn[data-color='black'] {background: black}
+.color-btn[data-color='red'] {background: red}
+.color-btn[data-color='green'] {background: green}
+.color-btn[data-color='blue'] {background: blue}
+

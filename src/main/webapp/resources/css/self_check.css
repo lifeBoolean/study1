@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+a {text-decoration:none;color:#7F7B73;}
+a:hover {color:#448CCB;text-decoration:underline;}
+
+body{
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+}
+
+P, UL, LI
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.png24 { 
+    tmp:expression(setPng24(this)); 
+} 
+
+
+td{font-size:13px; font-family:�뗭�; color:#676767;}
+select{font-size:12px; font-family:�뗭�;}
+
+.input_LogID{font-size:12px; width:75px; height:19px; background-color:#E2E2E2; border:0;}
+.input_LogPW{font-size:12px; width:75px; height:19px; background-color:#F0F0F0; border:0;}
+
+.input_sLogID{font-size:12px; width:60px; height:16px; background-image:url(../images_new/skin/img/bg_s_id.gif); border:0;}
+.input_sLogPW{font-size:12px; width:60px; height:16px; background-image:url(../images_new/skin/img/bg_s_pw.gif); border:0;}
+
+.ticker_a {text-decoration:none;color:#000000;}
+.ticker_a:hover {color:#000000;text-decoration:underline;}
+
+.board_Content{font-size:13px; line-height:19px;}
+
+.mempx { font-size:12px; color: #FF6000;}
+
+.smfont { font-size:11px; }
+
+.smfont2 { font-size:11px; color: #999999; }
+
+.smfont3 { font-size:11px; letter-spacing:-1px; }
+
+.smfont4 { font-size:12px; letter-spacing:-1px; }
+
+
+.fix { table-layout:fixed; }
+
+.btn1 { background-color:#FBF8EE; } 
+
+#dhtmltooltip{
+position: absolute;
+width: 200px;
+border: 1px solid black;
+padding: 2px;
+background-color: lightyellow;
+visibility: hidden;
+z-index: 100;
+/*�뚯쁺�� ��젣�섎젮硫� 諛붾옒 �꾨옒 �쇱씤�� ��젣�섎㈃ �쒕떎. �꾨옒 �쇱씤�� 諛섎뱶�� CSS �곸뿭�� 媛��� 留덉�留됱뿉 �꾩튂�쒗궎�꾨줉 �쒕떎.*/
+/*filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
+}
+
+
+
+
+/*
+.input_Logbox{font-size:12px; width:80px; height:20px; background-color:#AABF95; border:1; border-style:solid;  border-color:#6F8B54; text-align:center;}
+
+.searchBox{font-size:12px; width:110px; background-color:#FFFFFF; border:1; border-style:solid;border-color:#CCCCCC;}
+
+.flashBox{background-color:#FFFFFF; border:1; border-style:solid; border-color:#AAAAAA;}
+
+.top_a {text-decoration:none;color:#FFFFFF;}
+.top_a:hover {color:#F2F2F2;text-decoration:underline;}
+
+.selectBox{font-size:11px; width:140px;}
+
+.pet_a {text-decoration:none;color:#005952;}
+.pet_a:hover {color:#005952;text-decoration:underline;}
+
+.vet_a {text-decoration:none;color:#990000;}
+.vet_a:hover {color:#990000;text-decoration:underline;}
+
+.nr_a {text-decoration:none;color:#0066CC;}
+.nr_a:hover {color:#0066CC;text-decoration:underline;}
+
+.box{font-size:12px; width:200px; background-color:#F5F5F5; border:1; border-style:solid; border-color:#CCCCCC;}
+.titleBox{font-size:12px; width:70%; background-color:#FFFFFF; border:1; border-style:solid; border-color:#CCCCCC;}
+.inBox{font-size:12px; background-color:#E8F5FA; border:1; border-style:solid; border-color:#AAAAAA;}
+
+.adr_box{font-size:12px; width:100%; background-color:#F5F5F5; border:1; border-style:solid; border-color:#CCCCCC;}
+
+
+
+.logBox{font-size:12px; width:100px; height:18px; background-color:#FFFFFF; border:1; border-style:solid;  border-color:#CCCCCC;}
+.admin_logBox{font-size:12px; width:120px; height:18px; background-color:#F5F5F5; border:1; border-style:solid;  border-color:#CCCCCC;}
+
+.listSearch1{font-size:12px; height:17px; background-color:#F6F6F6; border:1; border-style:solid;border-color:#CCCCCC;}
+.listSearch2{font-size:13px; background-color:#F5F5F5; border:1; border-style:solid;border-color:#CCCCCC;}
+*/

@@ -1,0 +1,119 @@
+@charset "utf-8";
+.headerWrap {
+	width:100%;
+	min-width: 1200px;
+}
+.topWrap {
+	margin: 0 auto;
+	position:relative;
+	width:1200px;
+	height:70px;
+}
+.topWrap .siteLogo {
+	position:absolute;
+	top:18px;
+	left:20px;
+}
+.topWrap .lnbWrap {
+	position: relative;
+	float: right;
+	padding-top: 12px; 
+}
+.topWrap .lnbWrap ul.navLnb {
+	position: relative;
+}
+.topWrap .lnbWrap ul.navLnb:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.topWrap .lnbWrap .navLnb > li {
+	position: relative;
+	float: left;
+	padding: 0 5px;
+	color:#808080;
+}
+.topWrap .lnbWrap .navLnb > li::after {
+	content: '';
+    position: absolute;
+    right: 0;
+    top: -1px;
+    height: 12px;
+    width: 1px;
+    background-color: #ccc;
+}
+.topWrap .lnbWrap .navLnb > li:last-child::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -1px;
+    height: 12px;
+    width: 0px;
+    background-color: #ccc;
+}
+.topWrap .lnbWrap .navLnb li>a {
+	display:block;
+	padding: 0 5px;
+	font-size: 11px;
+}
+
+.menuWrap {
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    /* background-color: #5C89BC */
+}
+.menuWrap .gnbWrap {
+	margin: 0 auto;
+	width:1200px;
+	/* border: 1px solid blue; */
+}
+.menuWrap .gnbWrap::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.menuWrap .gnbWrap .navGnb > li {
+	position: relative;
+    float: left;
+    width: 20%;
+    line-height: 42px;
+    text-align: center;
+}
+.menuWrap .gnbWrap .navGnb > li::after {
+	content: '';
+    position: absolute;
+    right: 0;
+    top: -1px;
+    height: 44px;
+    width: 1px;
+    background-color: #ccc;
+}
+.menuWrap .gnbWrap .navGnb > li:last-child::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -1px;
+    height: 44px;
+    width: 0px;
+    background-color: #ccc;
+}
+.menuWrap .gnbWrap .navGnb li>a {
+	padding: 3px 5px;
+	font-size: 15px;
+	font-weight: 600;
+	text-align: center;
+}
+.menuWrap .gnbWrap .navGnb li>a:hover{
+	color: red !important;
+}
+.menuWrap .gnbWrap .navGnb .bigEvent {
+	display: block;
+    width: 240px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #1a1a6a;
+    border: 0;
+}
+.menuWrap .gnbWrap .navGnb .bigEvent span {
+    color: #fff !important;
+}

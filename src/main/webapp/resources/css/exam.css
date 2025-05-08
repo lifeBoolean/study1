@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+
+.exam_wrap {
+	min-width: 1400px;
+    border: 10px solid yellow;
+}
+.exam_wrap .exam_container {
+	margin: 0px auto;
+    width: 1400px;
+    border: 5px solid red;
+}
+.exam_wrap h2 {
+	border: 3px solid yellow;
+}
+.exam_wrap .articleWrap {
+	display: flex;
+	flex-direction: row;
+	border: 5px solid #000;
+}
+.exam_wrap .cont_area {
+	border: 5px solid green;
+}
+.exam_wrap .canvas_box {
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    overflow: hidden;
+	background: #eee;
+    border: 5px solid blue;
+}
+.exam_wrap .buzzerWrap {
+	border: 5px solid blue;
+}
+.exam_wrap .control_box {
+	width: 250px;
+	border: 5px solid yellow;
+}
+.exam_wrap .convas_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+ 	margin-top: -1400px;
+	margin-left: -2400px;
+    border: 5px solid yellow;
+}
+.exam_wrap .canvas {
+	text-align : center;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+	color: #fff;
+	font-size: 5em;
+}
+.exam_wrap .iconGroup {
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+.exam_wrap .buzzerWrap {
+	padding: 5px 0;
+	display : flex;
+	justify-content: center;
+}
+.exam_wrap .btnBuzzer {
+	margin: 10px;
+	color: #fff;
+	font-size: 2.5em;
+	width: 200px;
+	height: 80px;;
+	border: 1px solid #000;
+}
+.exam_wrap .cgreen {
+	background: green;
+}
+.exam_wrap .cyellow {
+	background: rgb(190, 190, 16);
+}
+.exam_wrap .cred {
+	background: red;
+}
+.exam_wrap .fontStrong {
+	font-size: 30px;
+}
